@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM VALIDATION</title>
+</head>
+<body>
+  NAME :  <input type="text" id="i1">
+  <br><br>
+
+  PASSWORD :  <input type="password"  id="i2">
+  <br><br>
+
+  CPASSWORD :   <input type="password"  id="i3">
+  <br><br>
+
+  E-MAIL :  <input type="email"  id="i4">
+  <br><br>
+
+  <input type="submit" onclick="validateform()">
+
+  <script>
+
+    nm = document.getElementById("i1");
+    pwd = document.getElementById("i2");
+    cpwd = document.getElementById("i3");
+    em = document.getElementById("i4");
+
+    function validateform()
+    {
+        if(nm.value == "")
+        {
+            alert("NAME REQUIRED.....!");
+            return false;
+        }
+
+        if(pwd.value == "")
+        {
+            alert("PASSWORD REQUIRED.....!");
+            return false;
+        }
+
+        if (pwd.value!=cpwd.value)
+        {
+            alert("PASSWORD DOESN'T MATCH....!")
+            return false;
+        }
+
+        if(em.value == "")
+        {
+            alert("E-MAIL REQUIRED.....!");
+            return false;
+        }
+    }
+
+
+  </script>
+
+
+    
+</body>
+</html>

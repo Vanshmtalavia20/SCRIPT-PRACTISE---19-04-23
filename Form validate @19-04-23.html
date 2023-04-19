@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM VALIDATE</title>
+</head>
+<body>
+    <!-- <form action=""> -->
+
+        NAME : <input type="text" id="nm"><br><br>
+    MOB : <input type="text" id="mb"><br><br>
+    PWD : <input type="text" id="pwd"><br><br>
+    CPWD : <input type="text" id="cpwd"><br><br>
+
+    <button onclick=" validateform()">SUBMIT</button>
+
+    <!-- </form> -->
+    <script>
+
+       n =  document.getElementById("nm");
+
+       m =  document.getElementById("mb");
+
+       p =  document.getElementById("pwd");
+
+       cp =  document.getElementById("cpwd");
+
+       ss = /^[a-zA-z]+$/;
+
+       qq = /^[0-9]{10}$/;
+
+      function validateform()
+      {
+        if (nm.value == "")
+        {
+
+            alert("NAME REQUIRED PLEASE FILL IT..........!")
+            return false;
+
+
+        }
+
+        if (!ss.test(nm.value))
+        {
+             alert("ONLY LETTERS ALLOWED.........!")
+             return false;
+        }
+
+        if (mb.value == "")
+        {
+
+            alert("MOBLIE NUMBER REQUIRED PLEASE FILL IT........!")
+            return false;
+
+            
+        }
+
+        if (!qq.test(mb.value))
+        {
+            alert("ONLY 10 DIGITS ALLOWED.......!")
+            return false;
+        }
+
+        if (pwd.value == "")
+        {
+
+            alert("PASSWORD REQUIRED PLEASE FILL IT........!")
+            return false;
+
+            
+        }
+
+        if (pwd.value!=cpwd.value)
+        {
+
+            alert("PASSWORD DOESN'T MATCH PLEASE CHECK AGAIN.......!")
+            return false;
+
+            
+        }
+      }
+
+
+    </script>
+
+
+    
+</body>
+</html>
